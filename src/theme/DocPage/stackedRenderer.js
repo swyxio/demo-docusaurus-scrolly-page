@@ -35,7 +35,9 @@ function Page({ children, docRoutes, versionMetadata, ...props }) {
 }
 
 const PageContainer = ({ children, slug }) => {
-  const [, { overlay, obstructed, highlighted }, i] = useStackedPage();
+  const [, pageState, i] = useStackedPage();
+  console.log({ pageState })
+  const { overlay, obstructed, highlighted } = pageState ?? {}
 
   return (
     <div
@@ -58,7 +60,8 @@ const StackedPageWrapper = ({ children, slug, i }) => (
   </PageIndexProvider>
 );
 
-const StackedLayout = ({ data = { swyx: 'rawdata' }, docRoutes, versionMetadata, location, slug = "rawslug" }) => {
+export default function StackedRenderer({ data = { swyx: 'rawdata' }, docRoutes, versionMetadata, location, slug = "rawslug" }) {
+  console.log({ docRoutes, versionMetadata, location, slug });
   // Use this callback to update what you want to stack.
   // `pageQuery` will be similar to the data prop you get in a Page component.
   // You can return `null` to filter out the page
@@ -92,4 +95,3 @@ const StackedLayout = ({ data = { swyx: 'rawdata' }, docRoutes, versionMetadata,
   );
 };
 
-export default StackedLayout;

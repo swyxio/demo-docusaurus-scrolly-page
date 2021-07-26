@@ -131,7 +131,7 @@ function DocPageContent({ currentDocRoute, versionMetadata, docRoutes, location,
             [styles.docMainContainerEnhanced]:
               hiddenSidebarContainer || !sidebar,
           })}>
-          <StackedRenderer {...{ docRoutes, location, versionMetadata }} />
+          <StackedRenderer {...{ docRoutes, location, versionMetadata, slug: location.pathname }} />
           {/* <div
             className={clsx(
               'container padding-top--md padding-bottom--lg',

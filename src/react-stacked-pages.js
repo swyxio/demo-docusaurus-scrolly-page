@@ -22,8 +22,8 @@ import { useHistory } from "react-router-dom";
 function withPrefix(string) {
   return string;
 }
-function navigate(string) {
-  let history = useHistory();
+function navigate(history, string) {
+  // cannot useHistory because rules of hooks
   history.push(string);
 }
 
@@ -303,6 +303,7 @@ export function useStackedPagesProvider({
     );
   }, [stackedPages, containerRef, scroll, setStackedPageStates]);
 
+  let history = useHistory();
   const navigateToStackedPage = useCallback(
     // (to: string, index: number = 0) => {
     (to, index = 0) => {
@@ -329,13 +330,14 @@ export function useStackedPagesProvider({
         });
         return;
       }
-      console.log('window.location', window.location);
+      // console.log('window.location', window.location);
       const search = qs.parse(window.location.search.replace(/^\?/, ""));
       search.stackedPages = stackedPages
         .slice(1, index + 1)
         .map((x) => x.slug)
         .concat(to);
-      navigate(
+
+      navigate(history,
         `${window.location.pathname.replace(
           withPrefix("/"),
           "/"
@@ -425,6 +427,7 @@ export function useStackedPage() {
 
   const currentPage = stackedPages[index];
 
+  console.log({ stackedPageStates, currentPage });
   return [
     currentPage,
     currentPage ? stackedPageStates[currentPage.slug] : {},

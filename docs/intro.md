@@ -2,34 +2,17 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# This is test content
 
-Let's discover **Docusaurus in less than 5 minutes**.
+## External links
 
-## Getting Started
+These links behave like normal:
 
-Get started by **creating a new site**.
+- [new.docusaurus.io](https://new.docusaurus.io)
 
-Or **try Docusaurus immediately** with **[new.docusaurus.io](https://new.docusaurus.io)**.
+## Internal links
 
-## Generate a new site
-
-Generate a new Docusaurus site using the **classic template**:
-
-```shell
-npx @docusaurus/init@latest init my-website classic
-```
-
-## Start your site
-
-Run the development server:
-
-```shell
-cd my-website
-
-npx docusaurus start
-```
-
-Your site starts at `http://localhost:3000`.
-
-Open `docs/intro.md` and edit some lines: the site **reloads automatically** and display your changes.
+- [/docs/tutorial-basics/create-a-page](/docs/tutorial-basics/create-a-page)
+- [./tutorial-basics/create-a-page.md](./tutorial-basics/create-a-page.md)
+  - this actually reads `. /tutorial-basics/create-a-page . md` but is transformed
+- [/create-a-page](/create-a-page)
