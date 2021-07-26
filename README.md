@@ -2,7 +2,11 @@
 
 this is a proof of concept showing how we can adapt docusaurus to load internal links in a stacked pane, similar to https://notes.andymatuschak.org/.
 
-Video: https://www.loom.com/share/5d4182dc41d648fc818a47989bcd9d8b
+## 3min Demo Video
+
+https://www.loom.com/share/5d4182dc41d648fc818a47989bcd9d8b
+
+## Installing
 
 typical install and run instructions, nothing special.
 
