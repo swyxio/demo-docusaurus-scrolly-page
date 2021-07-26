@@ -23,8 +23,8 @@ function Page({ children, docRoutes, versionMetadata, ...props }) {
       //   [styles.docItemWrapperEnhanced]: hiddenSidebarContainer,
       // },
     )}>
-    <h1>{'Page: ' + (props.title || 'Rendered Page')}</h1>
-    <pre>{JSON.stringify({ props, docRoutes }, null, 2)}</pre>
+    {/* <h1>{'Page: ' + (props.title || 'Rendered Page')}</h1> */}
+    {/* <pre>{JSON.stringify({ props, docRoutes }, null, 2)}</pre> */}
     <MDXProvider components={MDXComponents}>
       <FoundRoute versionMetadata={versionMetadata} />
       {/* {renderRoutes(docRoutes, {
