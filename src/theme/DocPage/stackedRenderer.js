@@ -13,6 +13,8 @@ import { MDXProvider } from '@mdx-js/react';
 import MDXComponents from '@theme/MDXComponents';
 
 function Page({ children, docRoutes, versionMetadata, ...props }) {
+  const FoundRoute = docRoutes.find((route) => route.path === props.slug).component
+  console.log({ FoundRoute })
   return <div
     className={clsx(
       'container padding-top--md padding-bottom--lg',
@@ -24,9 +26,10 @@ function Page({ children, docRoutes, versionMetadata, ...props }) {
     <h1>{'Page: ' + (props.title || 'Rendered Page')}</h1>
     <pre>{JSON.stringify({ props, docRoutes }, null, 2)}</pre>
     <MDXProvider components={MDXComponents}>
-      {renderRoutes(docRoutes, {
+      <FoundRoute versionMetadata={versionMetadata} />
+      {/* {renderRoutes(docRoutes, {
         versionMetadata,
-      })}
+      })} */}
     </MDXProvider>
   </div>
   // return <div className="stacked-page">
