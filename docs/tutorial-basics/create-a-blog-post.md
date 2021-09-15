@@ -6,6 +6,14 @@ sidebar_position: 3
 
 Docusaurus creates a **page for each blog post**, but also a **blog index page**, a **tag system**, an **RSS** feed...
 
+> ## More Links
+>
+> - [Create a Page](/docs/tutorial-basics/create-a-page)
+> - [Create a BlogPost](/docs/tutorial-basics/create-a-blog-post)
+> - [Create a Document](/docs/tutorial-basics/create-a-document)
+> - [Deploy your site](/docs/tutorial-basics/deploy-your-site)
+> - [Markdown features](/docs/tutorial-basics/markdown-features) this is an MDX file!
+
 ## Create your first Post
 
 Create a file at `blog/2021-02-28-greetings.md`:

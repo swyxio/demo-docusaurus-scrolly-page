@@ -2,6 +2,14 @@
 sidebar_position: 6
 ---
 
+> ## More Links
+>
+> - [Create a Page](/docs/tutorial-basics/create-a-page)
+> - [Create a BlogPost](/docs/tutorial-basics/create-a-blog-post)
+> - [Create a Document](/docs/tutorial-basics/create-a-document)
+> - [Deploy your site](/docs/tutorial-basics/deploy-your-site)
+> - [Markdown features](/docs/tutorial-basics/markdown-features) this is an MDX file!
+
 # Congratulations!
 
 You have just learned the **basics of Docusaurus** and made some changes to the **initial template**.

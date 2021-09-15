@@ -10,13 +10,21 @@ Add **Markdown or React** files to `src/pages` to create a **standalone page**:
 - `src/pages/foo.md` -> `localhost:3000/foo`
 - `src/pages/foo/bar.js` -> `localhost:3000/foo/bar`
 
+> ## More Links
+>
+> - [Create a Page](/docs/tutorial-basics/create-a-page)
+> - [Create a BlogPost](/docs/tutorial-basics/create-a-blog-post)
+> - [Create a Document](/docs/tutorial-basics/create-a-document)
+> - [Deploy your site](/docs/tutorial-basics/deploy-your-site)
+> - [Markdown features](/docs/tutorial-basics/markdown-features) this is an MDX file!
+
 ## Create your first React Page
 
 Create a file at `src/pages/my-react-page.js`:
 
 ```jsx title="src/pages/my-react-page.js"
-import React from 'react';
-import Layout from '@theme/Layout';
+import React from "react";
+import Layout from "@theme/Layout";
 
 export default function MyReactPage() {
   return (

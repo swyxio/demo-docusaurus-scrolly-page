@@ -10,6 +10,14 @@ Documents are **groups of pages** connected through:
 - **previous/next navigation**
 - **versioning**
 
+> ## More Links
+>
+> - [Create a Page](/docs/tutorial-basics/create-a-page)
+> - [Create a BlogPost](/docs/tutorial-basics/create-a-blog-post)
+> - [Create a Document](/docs/tutorial-basics/create-a-document)
+> - [Deploy your site](/docs/tutorial-basics/deploy-your-site)
+> - [Markdown features](/docs/tutorial-basics/markdown-features) this is an MDX file!
+
 ## Create your first Doc
 
 Create a markdown file at `docs/hello.md`:
@@ -30,7 +38,7 @@ Add metadatas to customize the sidebar label and position:
 
 ```md title="docs/hello.md" {1-4}
 ---
-sidebar_label: 'Hi!'
+sidebar_label: "Hi!"
 sidebar_position: 3
 ---
 

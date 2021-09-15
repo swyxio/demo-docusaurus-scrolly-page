@@ -24,6 +24,121 @@
   padding: 0 var(--ifm-pre-padding);
 }
 
-html[data-theme='dark'] .docusaurus-highlight-code-line {
+html[data-theme="dark"] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* // for stacked pages
+
+https://github.com/mathieudutour/gatsby-digital-garden/blob/78c75d4692021c342a4d059568c1c89d3409a25a/packages/gatsby-theme-garden/src/components/stacked-layout.css
+*/
+.page-columns-scrolling-container {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  flex-grow: 1;
+}
+
+.page-columns-container {
+  display: flex;
+  flex-grow: 1;
+  transition: width 100ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+@media screen and (max-width: 800px) {
+  .page-columns-container {
+    width: unset !important;
+  }
+}
+
+/* // page-container
+
+https://github.com/mathieudutour/gatsby-digital-garden/blob/02d3870baa11e7897f104d9aca3de5582c7c4b92/packages/gatsby-theme-garden/src/components/note-wrapper.css
+
+*/
+
+.page-container {
+  background: var(--note-bg);
+  transition: background 0.3s ease;
+}
+
+.page-container:first-child {
+  border-left: none;
+}
+
+.page-container .page-content,
+.page-container .obstructed-label {
+  transition: opacity 75ms linear;
+}
+
+.page-container .obstructed-label {
+  display: block;
+  color: var(--text);
+  text-decoration: none;
+  font-size: 17px;
+  line-height: 40px;
+  font-weight: 500;
+  writing-mode: vertical-lr;
+  text-orientation: sideways;
+  margin-top: 36px;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  position: absolute;
+  background-color: transparent;
+  width: 40px;
+  overflow: hidden;
+  opacity: 0;
+  transition: color 0.3s ease;
+  pointer-events: none;
+}
+
+.page-container.page-container-highlighted {
+  background: var(--references-bg);
+  transition: background 0.3s ease;
+}
+
+.page-content img {
+  max-width: 100%;
+}
+
+@media screen and (max-width: 800px) {
+  .page-container {
+    padding: 16px;
+    width: 100%;
+    overflow-y: auto;
+  }
+}
+
+@media screen and (min-width: 801px) {
+  .page-container {
+    transition: box-shadow 100ms linear, opacity 75ms linear,
+      transform 200ms cubic-bezier(0.19, 1, 0.22, 1);
+    flex-shrink: 0;
+    width: 625px;
+    max-width: 625px;
+    top: 0px;
+    position: sticky;
+    flex-grow: 1;
+    border-left: 1px solid var(--separator);
+    padding: 0;
+  }
+
+  .page-content {
+    overflow-y: auto;
+    height: 100%;
+    padding: 32px;
+  }
+
+  .page-container-overlay {
+    box-shadow: 0px 0px 15px 3px var(--shadow);
+  }
+
+  .page-container-obstructed .page-content {
+    opacity: 0;
+  }
+  .page-container-obstructed .obstructed-label {
+    opacity: 1;
+    pointer-events: all;
+  }
 }
